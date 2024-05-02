@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-//#include "Tic Tac Toe.h"
+#include "Tic Tac Toe.h"
 
 using namespace std;
 
@@ -22,7 +22,9 @@ void Again(string name);
 
 void SecondAgain(string name);
 
-int main()
+void MainMenu();
+
+void MainMenu()
 
 {
 	string name;
@@ -32,7 +34,7 @@ int main()
 	int length = hello.length();
 
 	cout << "Say hello" << endl;
-
+	
 	getline(cin, hello);
 
 	if (hello == "Hello" || hello == "hello" || hello == "Hi" || hello == "hi" || hello == "Hey" || hello == "hey")
@@ -40,9 +42,10 @@ int main()
 	{
 		cout << "Hey! my name is Hal what is your name?" << endl;
 
-		cin >> name;
-		cout << name;
-		cout << " what a cool name! I look forward getting to know you! What would you like to do to get to know eachother better? Game or Talk? Or if youre free i love questions!" << endl;
+		getline(cin >> ws, name);
+		//cin >> name;
+		cout << name << " what a cool name! I look forward getting to know you! What would you like to do to get to know eachother better? Game or Talk? Or if youre free i love questions!" << endl;
+	
 	}
 
 	else if (hello == "Hello Hal" || hello == "hello hal" || hello == "hello Hal" || hello == "Hello hal" || hello == "Hey Hal" || hello == "hey hal" || hello == "Hey hal" || hello == "hey Hal" || hello == "Hi Hal" || hello == "hi hal" || hello == "Hi hal" || hello == "hi Hal")
@@ -55,6 +58,7 @@ int main()
 		cout << "oh thats right! " << name << " I will probably forget again My long term memory isnt very good, but I dont mind - say in the mean time do you want to talk, ask questions or game?" << endl;
 
 	}
+
 	else if (length <= 1)
 
 	{
@@ -98,6 +102,7 @@ int main()
 		cout << "What would you like to talk about?" << endl;
 		LetsTalk(name);
 	}
+
 }
 	
 
@@ -205,6 +210,15 @@ void WantToPlayaGame(string name)
 	{
 		EvenorOdd(name);
 	}
+
+	else if (answer == "Tic Tac Toe" || answer == "tic tac toe")
+
+	{
+		
+
+	
+	}
+	
 }
 	
 
@@ -364,5 +378,66 @@ void LetsTalk(string name)
 		cout << "I am not sure she will understand that let's try again" << endl;
 
 	}
+
+	
+
 }
 
+int main()
+
+{
+
+	MainMenu();
+
+	TicTacToe game;
+
+
+		/*TicTacToe obj;
+		obj.token = 'x';*/
+
+		cout << "enter the name of the first player : " << endl;
+
+		cin >> game.n1;
+
+		cout << "enter the name of the second player : " << endl;
+
+		cin >> game.n2;
+
+		cout << game.n1 << " is player 1 so they will go first" << endl;
+		cout << game.n2 << " is player 2 so they will go second" << endl;
+
+		while (game.function())
+
+		{
+			game.Board();
+			game.Token();
+
+		}
+
+		if (game.token == 'x' && game.tie == false)
+
+		{
+			cout << game.n2 << "wins!!" << endl;
+
+		}
+
+		else if (game.token == 'o' && game.tie == false)
+
+		{
+			cout << game.n1 << "wins!!" << endl;
+
+		}
+
+		else if (game.tie == true)
+
+		{
+			cout << "its a draw!" << endl;
+		}
+
+	/*game.Board();
+	game.Token();
+	game.function();*/
+
+	return 0;
+	
+}

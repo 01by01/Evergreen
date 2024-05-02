@@ -1,5 +1,5 @@
-#pragma once
 #include <iostream>
+#ifndef Tic Tac Toe.h
 using namespace std;
 
 class TicTacToe
@@ -141,44 +141,4 @@ public:
 		return false;
 	}
 };
-
-int main()
-
-{
-
-	TicTacToe obj;
-	obj.token = 'x';
-
-	cout << "enter the name of the first player : " << endl;
-
-	cin >> obj.n1;
-
-	cout << "enter the name of the second player : " << endl;
-
-	cin >> obj.n2;
-
-	cout << obj.n1 << " is player 1 so they will go first" << endl;
-	cout << obj.n2 << " is player 2 so they will go second" << endl;
-
-	while (obj.function())
-	{
-		obj.Board();
-		obj.Token();
-
-	}
-
-	if (obj.token == 'x' && obj.tie == false)
-	{
-		cout << obj.n2 << "wins!!" << endl;
-	}
-	else if (obj.token == '0' && obj.tie == false)
-	{
-		cout << obj.n1 << "wins!!" << endl;
-	}
-	else
-	{
-		cout << "its a draw!" << endl;
-	}
-
-	return 0;
-}
+#endif
