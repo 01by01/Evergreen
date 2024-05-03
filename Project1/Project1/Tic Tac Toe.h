@@ -78,22 +78,28 @@ public:
 				token = 'x';
 			}
 
+
+
+			else
+
+			{
+				cout << "Uh oh! Looks like this space is taken. Try again!" << endl;
+
+			}
+
 		}
 
-		else
+		return;
 
-		{
-			cout << "Uh oh! Looks like this space is taken. Try again!" << endl;
-			return;
-
-		}
 	}
 
 
 		bool function()
 
 		{
+
 			for (int i = 0; i < 3; i++)
+
 			{
 				if (space[i][0] == space[i][1] && space[i][0] == space[i][2] && space[i][0] != ' ')
 
@@ -108,12 +114,15 @@ public:
 			if ((space[0][0] == space[1][1] && space[0][0] == space[2][2] && space[0][0] != ' ') || (space[0][2] == space[1][1] && space[0][2] == space[2][0] && space[0][2] != ' '))
 
 			{
+
 				return false;
+
 			}
 
 			for (int i = 0; i < 3; i++)
 
 			{
+
 				for (int j = 0; j < 3; j++)
 
 				{
