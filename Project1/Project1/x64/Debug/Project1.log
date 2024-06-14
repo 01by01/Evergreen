@@ -1,6 +1,0 @@
-﻿  Source.cpp
-C:\Users\g_kel\Documents\Github\Pending--Hal-\Pending--Hal-\Project1\Project1\Source.cpp(34,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\g_kel\Documents\Github\Pending--Hal-\Pending--Hal-\Project1\Project1\Source.cpp(232,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\g_kel\Documents\Github\Pending--Hal-\Pending--Hal-\Project1\Project1\Source.cpp(300,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\g_kel\Documents\Github\Pending--Hal-\Pending--Hal-\Project1\Project1\Tic Tac Toe.h(142): warning C4715: 'TicTacToe::function': not all control paths return a value
-  Project1.vcxproj -> C:\Users\g_kel\Documents\Github\Pending--Hal-\Pending--Hal-\Project1\x64\Debug\Project1.exe
